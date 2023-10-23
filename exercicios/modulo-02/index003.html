@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual é o seu nome?")
+      var trabalho = window.prompt("Qual é o seu trabalho?")
+      var salario = window.prompt("Qual é o seu objetivo salarial?")
+      document.write(`Olá, <strong>${nome}</strong>! Seja bem-vindo(a)!`)
+      document.write("<br />Seu nome tem " + nome.length + " letras.")
+      document.write(
+        "<br />Seu nome em maiúsculas é " + nome.toUpperCase() + "."
+      )
+      document.write(
+        "<br />Seu nome em minúsculas é " + nome.toLowerCase() + "."
+      )
+      document.write("<br />Seu trabalho atual é " + trabalho + ".")
+
+      salario = parseFloat(salario) // Verificar se o valor de salário é um número
+
+      if (!isNaN(salario)) {
+        // Formatar e exibir o salário em BRL
+        document.write(
+          "<br />Seu objetivo de salário é " +
+            salario.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            }) +
+            "."
+        )
+      } else {
+        document.write(
+          "<br />Salário inválido. Por favor, insira um número válido."
+        )
+      }
+    </script>
+  </body>
+</html>
