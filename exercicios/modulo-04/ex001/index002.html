@@ -37,7 +37,7 @@
           min="1990"
           max="2023"
           size="15"
-        />
+        /> 
       </p>
 
       <p>
@@ -48,7 +48,7 @@
           name="txtnac"
           id="txtnac"
           placeholder="Digite sua nacionalidade"
-        />
+        /> 
       </p>
 
       <p>
@@ -88,7 +88,7 @@
 
         if (
           nome === "" ||
-          nasc < 1990 ||
+          nasc < 1900 ||
           nasc > 2023 ||
           nac === "" ||
           (!masc && !fem)
@@ -99,7 +99,7 @@
           res.innerHTML = `<p>Olá, <strong>${nome}</strong>!</p>`
 
           // Verificar a nacionalidade de forma flexível
-          if (["brasileiro", "brazil"].includes(nac) && nasc <= 2005) {
+          if (["Brasileiro", "brasileiro", "Brasileira", "brasileira", "Brasil", "brasil", "Brazil", "brazil"].includes(nac) && nasc <= 2005) {
             if (masc) {
               res.innerHTML += `<p>Você é <strong>Brasileiro</strong> e <strong>maior de idade</strong>, portanto, deve se alistar ao <strong>Serviço Militar</strong>.</p>`
             } else if (fem) {
