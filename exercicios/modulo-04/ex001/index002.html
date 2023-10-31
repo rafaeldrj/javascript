@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nacionalidade</title>
-</head>
-<body>
-  <h1>Sistema de Nacionalidade</h1>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviço Militar</title>
+  </head>
+  <body>
+    <h1>Sistema de Nacionalidade</h1>
+
+    <p>Verifique se você precisa servir ao seu país.</p>
+
+    <p>
+      No término do preenchimento dos dados, clique no botão
+      <strong>Verificar.</strong>
+    </p>
+
+    <form id="form">
+      <p>
+        Nome:
+        <input
+          type="text"
+          required
+          name="txtnome"
+          id="txtnome"
+          placeholder="Digite seu nome completo"
+        /> <label for="txtnome" style="color: black">*</label>
+      </p>
+
+      <p>
+        Ano de Nascimento:
+        <input
+          type="number"
+          required
+          name="txtnasc"
+          id="txtnasc"
+          min="1990"
+          max="2023"
+          size="15"
+        /> <label for="txtnasc" style="color: black">*</label>
+      </p>
+
+      <p>
+        Nacionalidade:
+        <input
+          type="text"
+          required
+          name="txtnac"
+          id="txtnac"
+          placeholder="Digite sua nacionalidade"
+        /> <label for="txtnac" style="color: black">*</label>
+      </p>
+
+      <p>
+        Sexo: <input type="radio" name="radsex" id="radmasc" checked />
+        <label for="radmasc">Masculino</label>
+        <input type="radio" name="radsex" id="radfem" />
+        <label for="radfem">Feminino</label>
+      </p>
+    </form>
+
+    <div id="res"></div>
+    <div id="error"></div>
+
+    <p>
+      <input type="button" value="Verificar" onclick="verificar()" />
+      <input type="button" value="Limpar" onclick="limpar()" />
+    </p>
+
+    <script>
+      function verificar() {
+        const nomeInput = document.getElementById("txtnome")
+        const nascInput = document.getElementById("txtnasc")
+        const nacInput = document.getElementById("txtnac")
+        const mascInput = document.getElementById("radmasc")
+        const femInput = document.getElementById("radfem")
+        const res = document.getElementById("res")
+        const error = document.getElementById("error")
+
+        const nome = String(nomeInput.value)
+        const nasc = Number(nascInput.value)
+        const nac = String(nacInput.value.toLowerCase()) // Converter para letras minúsculas
+        const masc = mascInput.checked
+        const fem = femInput.checked
+
+        // Limpar mensagens de erro anteriores
+        error.innerHTML = ""
+
+        if (
+          nome === "" ||
+          nasc < 1990 ||
+          nasc > 2023 ||
+          nac === "" ||
+          (!masc && !fem)
+        ) {
+          error.innerHTML = "Por favor, preencha todos os campos obrigatórios."
+          res.innerHTML = ""
+        } else {
+          res.innerHTML = `<p>Olá, <strong>${nome}</strong>!</p>`
+
+          // Verificar a nacionalidade de forma flexível
+          if (["brasileiro", "brazil"].includes(nac) && nasc <= 2005) {
+            if (masc) {
+              res.innerHTML += `<p>Você é <strong>Brasileiro</strong> e <strong>maior de idade</strong>, portanto, deve se alistar ao <strong>Serviço Militar</strong>.</p>`
+            } else if (fem) {
+              res.innerHTML += `<p>Você é <strong>Brasileira</strong> e <strong>mulher</strong>, portanto, não precisa se alistar ao <strong>Serviço Militar</strong>.</p>`
+            }
+          } else {
+            res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>, portanto, não precisa se alistar ao <strong>Serviço Militar Brasileiro</strong>.</p>`
+          }
+        }
+      }
+
+      function limpar() {
+        const form = document.getElementById("form")
+        form.reset()
+        document.getElementById("res").innerHTML = ""
+        document.getElementById("error").innerHTML = ""
+      }
+    </script>
+  </body>
 </html>
