@@ -109,16 +109,19 @@
               "brasil",
               "Brazil",
               "brazil",
-            ].includes(nac) &&
-            nasc <= 2005
+            ].includes(nac)
           ) {
             if (masc) {
               res.innerHTML += `<p>Você é <strong>Brasileiro</strong> e <strong>maior de idade</strong>, portanto, deve se alistar ao <strong>Serviço Militar Obrigatório</strong>.</p>`
-            } else if (fem) {
-              res.innerHTML += `<p>Você é <strong>Brasileira</strong> e <strong>mulher</strong>, portanto, não precisa se alistar ao <strong>Serviço Militar Brasileiro</strong>.</p>`
             }
           } else {
             res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>, portanto, não precisa se alistar ao <strong>Serviço Militar Brasileiro</strong>.</p>`
+          }
+          if (nasc >= 2006) {
+            res.innerHTML = `<p>Você é <strong>Brasileiro</strong> e <strong>menor de idade</strong>, portanto, não precisa se alistar ao <strong>Serviço Militar Brasileiro</strong>.</p>`
+          }
+          if (fem) {
+            res.innerHTML = `<p>Você é <strong>Brasileira</strong> e <strong>mulher</strong>, portanto, não precisa se alistar ao <strong>Serviço Militar Brasileiro</strong>.</p>`
           }
         }
       }
