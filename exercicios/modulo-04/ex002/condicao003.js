@@ -1,8 +1,7 @@
 var agora = new Date()
 var diaSemana = agora.getDay()
 
-
-switch (diaSemana) { 
+switch (diaSemana) {
   case 0:
     console.log("Domingo")
     break
