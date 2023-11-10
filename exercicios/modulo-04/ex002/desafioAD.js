@@ -9,7 +9,6 @@ var teste = () => {
     const unidadesFaltando = caixa - (carrinho % caixa)
     return unidadesFaltando
   }
-  
 }
 
 console.log(teste())
