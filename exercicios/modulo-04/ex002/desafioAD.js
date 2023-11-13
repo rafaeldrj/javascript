@@ -17,4 +17,5 @@ console.log(teste())
 var caixa = 12
 var carrinho = 49
 
-var teste = () => {}
+var teste 
+var teste2 
