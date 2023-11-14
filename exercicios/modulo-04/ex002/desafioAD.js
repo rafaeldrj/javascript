@@ -20,6 +20,6 @@ var carrinho = 49
 var teste 
 var teste2 
 var teste3
-var teste4
+
 
 
