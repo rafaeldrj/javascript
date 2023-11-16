@@ -14,7 +14,7 @@ var teste = () => {
 console.log(teste())
 
 // Path: exercicios/modulo-04/ex002/desafioAE.js
-var caixa = 12
+
 
 
 
