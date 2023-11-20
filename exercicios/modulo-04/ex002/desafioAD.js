@@ -13,7 +13,7 @@ var teste = () => {
 
 console.log(teste())
 
-// Path: exercicios/modulo-04/
+// Path: exercicios/
 
 
 
