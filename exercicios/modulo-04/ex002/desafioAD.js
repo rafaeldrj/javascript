@@ -12,3 +12,5 @@ var teste = () => {
 }
 
 console.log(teste())
+
+var caixa
