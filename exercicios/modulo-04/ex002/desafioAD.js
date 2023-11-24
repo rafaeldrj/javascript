@@ -16,7 +16,7 @@ console.log(teste())
 var a
 var b
 var c
-var d
+
 
 
 
