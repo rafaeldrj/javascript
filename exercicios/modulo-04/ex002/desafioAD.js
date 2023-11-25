@@ -14,7 +14,7 @@ var teste = () => {
 console.log(teste())
 
 var a
-var b
+
 
 
 
