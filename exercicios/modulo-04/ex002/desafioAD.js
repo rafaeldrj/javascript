@@ -15,3 +15,4 @@ console.log(teste())
 
 var a1
 var b1
+var c1
