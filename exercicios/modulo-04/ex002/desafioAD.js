@@ -20,4 +20,3 @@ var d1
 var e1
 var a2
 var b2
-var c2
