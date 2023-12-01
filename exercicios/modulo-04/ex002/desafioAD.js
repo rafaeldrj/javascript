@@ -12,8 +12,3 @@ var teste = () => {
 }
 
 console.log(teste())
-
-var a1
-
-
-
