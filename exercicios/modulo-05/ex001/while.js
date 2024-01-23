@@ -3,6 +3,3 @@ while (c <= 10) {
   console.log(`Passo ${c}`)
   c++
 }
-
-var a
-
