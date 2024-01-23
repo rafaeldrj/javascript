@@ -5,5 +5,4 @@ while (c <= 10) {
 }
 
 var a
-var b
-var d
+
