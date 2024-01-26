@@ -8,4 +8,3 @@ var a
 var b
 var d
 var e
-var f
