@@ -5,6 +5,6 @@ do {
 } while (c <= 100)
 
 var a
-var b
+
 
 
