@@ -7,5 +7,4 @@ while (c <= 10) {
 var a
 var b
 var c
-var d 
-var e
+var d
