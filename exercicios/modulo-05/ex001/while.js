@@ -4,4 +4,3 @@ while (c <= 10) {
   c++
 }
 
-var a
