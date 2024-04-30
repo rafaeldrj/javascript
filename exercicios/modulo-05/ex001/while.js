@@ -10,3 +10,4 @@ var c
 var d
 var e
 var a2
+var b2
