@@ -25,4 +25,7 @@ function contar() {
       }
     }
   }
+  
+  var a
+
 }
