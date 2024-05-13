@@ -29,6 +29,5 @@ function contar() {
   var a
   var b
   var c
-  var d
 
 }
