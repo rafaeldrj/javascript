@@ -30,6 +30,5 @@ function contar() {
   var b
   var c
   var d
-  var e
 
 }
