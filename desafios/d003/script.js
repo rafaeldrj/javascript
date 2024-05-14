@@ -27,5 +27,6 @@ function contar() {
   }
 
   var a
+  var b
 
 }
