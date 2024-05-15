@@ -5,3 +5,11 @@ num.sort()
 console.log(num)
 console.log(`O vetor tem ${num.length} posições`)
 console.log(`Nosso vetor e o ${num}`)
+let pos = num.indexOf(8)
+if (pos == -1) {
+  console.log(`O valor nao foi encontrado!`)
+} else {
+  console.log(`O valor esta na posição ${pos}`)
+}
+
+
