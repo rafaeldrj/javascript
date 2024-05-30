@@ -3,5 +3,3 @@ let v = function(x) {
 }
 
 console.log(v(7))
-
-var a
